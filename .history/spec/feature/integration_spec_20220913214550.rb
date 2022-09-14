@@ -61,16 +61,16 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in 'Author', with: 'Suzzane Collins'
     fill_in 'Price', with: '100.02'
     select '2001', from: 'book[published_date(1i)]'
-    select 'April', from: 'book[published_date(2i)]'
+    select 'December', from: 'book[published_date(2i)]'
     select '10', from: 'book[published_date(3i)]'
     click_on 'Create Book'  
     visit books_path
-    expect(page).to have_content('Hunger Games')
+    expect(page).to have_content('Hunger Games', 'Suzzane Collins', '2001', 'December', '12')
     expect(page).to have_content('Suzzane Collins')
     expect(page).to have_content('2001')
-    expect(page).to have_content('4')
-    expect(page).to have_content('10')
-    expect(page).to have_content('100.02')
+    expect(page).to have_content('December')
+    expect(page).to have_content('12')
+    expect(page).to have_content('12')
   end
 
 end

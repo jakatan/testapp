@@ -32,7 +32,7 @@ end
 
 RSpec.describe Book, type: :model do
   subject do
-    described_class.new(title: 'the hunger games', price: '5.21', author: 'suzzane collins', published_date: Date.new(2001,1,25))
+    described_class.new(price: '20')
   end
 
   it 'is valid with valid attributes' do
@@ -47,7 +47,7 @@ end
 
 RSpec.describe Book, type: :model do
   subject do
-    described_class.new(title: 'the dictionary', price: '95.52', author: 'meriam webster', published_date: Date.new(2010,5,25))
+    described_class.new(published_date: '2018-10-15T16:06:39+02:00')
   end
 
   it 'is valid with valid attributes' do

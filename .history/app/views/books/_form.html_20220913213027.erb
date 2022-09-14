@@ -28,7 +28,7 @@
 
   <div class="field">
   <%= form.label :published_date%>
-  <%= form.date_select :published_date, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year-100, end_year: 2022}, {required: true} %>
+  <%= form.date_select :published_date, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year-100, end_year: 2022}, {required: true, disabled: false} %>
   </div>
 
   <div class="actions">
